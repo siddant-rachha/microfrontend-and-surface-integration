@@ -7,5 +7,9 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "workspaces": [
+    "demo-microfrontend",
+    "demo-surface"
+  ]
 }
