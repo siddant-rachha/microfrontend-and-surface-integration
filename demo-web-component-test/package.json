@@ -1,38 +1,40 @@
 {
   "name": "demo-web-component-test",
-  "version": "2.1.1",
+  "version": "4.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-  "dist"
+    "dist"
   ],
   "exports": {
-  ".": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.js"
-  }
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
   },
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tsc --watch",
     "prepare": "npm run build",
-    "publish": "npm publish --access public"
+    "publish": "npm publish --access public",
+    "bundle": "tsc && esbuild src/main.ts --bundle --outfile=dist/bundle.js --format=esm"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.0.0"
+    "@mui/material": "^6.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "esbuild": "^0.25.0",
     "typescript": "^5.7.3"
   }
 }

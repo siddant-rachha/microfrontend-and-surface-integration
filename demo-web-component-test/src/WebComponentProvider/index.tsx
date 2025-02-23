@@ -53,4 +53,6 @@ class WebComponentProvider extends HTMLElement {
 }
 
 // Define the custom element
-customElements.define("demo-web-component-test", WebComponentProvider);
+if(!customElements.get("demo-web-component-test")){
+  customElements.define("demo-web-component-test", WebComponentProvider);
+}

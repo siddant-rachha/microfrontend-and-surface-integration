@@ -8,7 +8,7 @@ interface WebComponentProps {
 
 const WebComponentLoader: React.FC<WebComponentProps> = ({ text, desc }) => {
   useEffect(() => {
-    import('demo-web-component-test');
+    // import('demo-web-component-test');
   }, []);
 
   return React.createElement('demo-web-component-test', { text, desc });
