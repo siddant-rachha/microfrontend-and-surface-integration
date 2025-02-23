@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script type="module" src="https://unpkg.com/demo-web-component-test@4.0.1/dist/bundle.js"></Script>
+        <Script type="module" src="https://unpkg.com/demo-web-component-test@4.1.1/dist/bundle.js"></Script>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
