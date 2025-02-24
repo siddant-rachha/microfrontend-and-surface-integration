@@ -1,9 +1,19 @@
 'use client';
 // import {MFButton} from 'demo-microfrontend';
 import React from 'react';
-import WebComponentLoader from './WebComponentLoader';
+// import WebComponentLoader from './WebComponentLoader';
 
-export default function Home() {
+declare global {
+  namespace React {
+    namespace JSX {
+      interface IntrinsicElements {
+        'demo-web-component-test': { text?: string; desc?: string };
+      }
+    }
+  }
+}
+
+export default function Home(): React.JSX.Element {
 
   return (
     <div style={{padding: '10px'}}>
@@ -14,13 +24,12 @@ export default function Home() {
           text='This text from web component' 
           desc='This desc comes from WC' 
         /> */}
-        <WebComponentLoader 
+        {/* <WebComponentLoader 
           text='This text from web component script tag' 
           desc='This desc comes from WC script tag' 
-        />
+        /> */}
 
-        {/* this throw typescript error, needs ts fix */}
-        {/* <demo-web-component-test text='This text from web component test' desc='This desc comes from WC test' /> */}
+        <demo-web-component-test text='This text from web component IntrinsicElements' desc='This desc comes from WC IntrinsicElements' />
       </div>
     </div>
   );
